@@ -61,6 +61,9 @@ var max_money = function() {
     }
 }
 
+/*var meter = function() {
+    $('.meter').html("<meter max='10' high='8' low='2' value="+ me.money +">6</meter>");
+}*/
 
 var round = 0
 
@@ -127,6 +130,26 @@ var beginRound = function() {
     getMoneyM(ai1);
     getMoneyM(ai2);
     getMoneyM(ai3);
+    /*var taxPayer = function() {
+        var seeIf = Math.floor(Math.random()*5);
+        if (seeIf === 4) {
+            var unluckyR = me.money * rollDice();
+            var unluckyP = me;
+            var seeU = function(pl) {
+                var checkedR = pl.money * rollDice();
+                if (checked > unlucky) {
+                    unlucky = checked;
+                    unluckyP = pl;
+                }
+            }
+            seeU(ai1);
+            seeU(ai2);
+            seeU(ai3);
+            unluckyP.money = unluckyP.money/2;
+            confirm(unluckyP.name + " lost " + unluckyP.money);
+        }
+    }
+    taxPayer();*/
     
     var taxPayer = function() {
         round += 1
