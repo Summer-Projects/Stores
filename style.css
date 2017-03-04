@@ -4,17 +4,21 @@ td {
     border: solid 0.5px;
     text-align: center;
 }
+
 table {
     margin: auto;
     background-color:white;
 }
+
 p {
     text-align: center;
 }
+
 .title {
     text-align: center;
     font-size: 50px;
 }
+
 #button {
     height: 10%;
     width: 30%;
@@ -26,16 +30,18 @@ p {
     background: red;
     font-size: 20px;
 }
+
 .back {
     margin: auto;
 }
+
 .credits {
     text-align: center;
 }
 
 body {
     background-image:url(http://www.newdesignfile.com/postpic/2016/05/vector-store-icon_398749.jpg);
-    background-size: cover;
+    background-size: 100%;
 }
 
 h6, summary {
