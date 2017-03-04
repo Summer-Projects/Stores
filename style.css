@@ -1,0 +1,54 @@
+td {
+    height: 50px;
+    width: 50px;
+    border: solid 0.5px;
+    text-align: center;
+}
+table {
+    margin: auto;
+    background-color:white;
+}
+p {
+    text-align: center;
+}
+.title {
+    text-align: center;
+    font-size: 50px;
+}
+#button {
+    height: 10%;
+    width: 30%;
+    border: solid 1.5px;
+    border-radius:20%;
+    text-align: center;
+    float: left;
+    margin: 9%;
+    background: red;
+    font-size: 20px;
+}
+.back {
+    margin: auto;
+}
+.credits {
+    text-align: center;
+}
+
+body {
+    background-image:url(http://www.newdesignfile.com/postpic/2016/05/vector-store-icon_398749.jpg);
+    background-size: cover;
+}
+
+h6, summary {
+    color:red;
+}
+
+.owners {
+    text-align:center;
+}
+si {
+    color: blue;
+}
+
+.meter {
+    margin:auto;
+}
