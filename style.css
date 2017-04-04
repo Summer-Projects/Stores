@@ -51,10 +51,12 @@ h6, summary {
 .owners {
     text-align:center;
 }
-si {
+
+a {
     color: blue;
 }
-
-.meter {
-    margin:auto;
-}
+.gameB {
+    margin-top: 50px;
+    background-color: #00ff00;
+    border-radius: 10px;
+}   
