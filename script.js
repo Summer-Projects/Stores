@@ -1,7 +1,9 @@
-var main = function() {
+$(document).ready(function() {
     $(".rules").hide();
     $(".game1").hide();
     $('.game2').hide();
+    $('.game3').hide();
+    $('.game4').hide();
     $(".game").hide();
     $(".ruleButton").click(function() {
         $(".homePage").hide(1000);
@@ -31,9 +33,15 @@ var main = function() {
         $('.game').hide(1000);
         $('.game2').fadeIn(1000);
     });
-}
-
-$(document).ready(main);
+    $('.gameiii').click(function() {
+        $('.game').hide(1000);
+        $('.game3').fadeIn(1000);
+    });
+    $('.gameiv').click(function() {
+        $('.game').hide(1000);
+        $('.game4').fadeIn(1000);
+    });
+});
 
 function player(name) {
     this.money = 15,
@@ -54,6 +62,10 @@ var ai2 = new player('AI2');
 var ai3 = new player('AI3');
 var playerList = [player1,player2,player3,player4,ai1,ai2,ai3];
 var round = 0;
+var winnerList = [];
+var winner1;
+var winner2;
+var winner3;
     
 //functions
 var youBuyWorkers = function(pl) {
@@ -104,6 +116,36 @@ var taxPayer = function() {
         confirm("There are " + left + " days till taxday");
     }
 }
+var cWinner = function(round) {
+    for (var i = 0; i < playerList.length; i++) {
+        if (playerList[i].money >= 500000) {
+            winnerList.push(playerList[i]);
+        }
+    }
+    if (winnerList.length === 1) {
+        winner1 = winnerList[0];
+        round = function() {
+            confirm(winner1.name + " won with " + winner1.money);
+        }
+    } else if (winnerList.length === 2) {
+        winner1 = winnerList[0];
+        winner2 = winnerList[1];
+        round = function() {
+            confirm(winner1.name + " and " + winner2.name + " both won with over 500,000");
+        }
+    } else if (winnerList.length === 3) {
+        winner1 = winnerList[0];
+        winner2 = winnerList[1];
+        winner3 = winnerList[2];
+        round = function() {
+            confirm(winner1.name + ", " + winner2.name + ", and " + winner3.name + " all won with over 500,000");
+        }
+    } else if (winnerList.length === 4) {
+        round = function() {
+            confirm("Everybody won with over 500,000");
+        }
+    }
+}
 //round functions
 
 var beginRound1 = function() {
@@ -119,6 +161,7 @@ var beginRound1 = function() {
     getMoneyM(ai2);
     getMoneyM(ai3);
     taxPayer();
+    cWinner(beginRound1);
 }
 var beginRound2 = function() {
     if (player1.name === "#player1") {
@@ -134,4 +177,40 @@ var beginRound2 = function() {
     getMoneyM(ai1);
     getMoneyM(ai3);
     taxPayer();
+    cWinner(beginRound2);
+}
+var beginRound3 = function() {
+    if (player1.name === '#player1') {
+        player1.name = prompt("What is the first player's name?");
+        player2.name = prompt("What is the second player's name?");
+        player3.name = prompt("What is the third player's name?");
+    }
+    youBuyWorkers(player1);
+    youBuyWorkers(player2);
+    youBuyWorkers(player3);
+    buyWorkers(ai1);
+    getMoneyM(player1);
+    getMoneyM(player2);
+    getMoneyM(player3);
+    getMoneyM(ai1);
+    taxpayer();
+    cWinner(beginRound3);
+}
+var beginRound4 = function() {
+    if (player1.name === '#player1') {
+        player1.name = prompt("What is the first player's name?");
+        player2.name = prompt("What is the second player's name?");
+        player3.name = prompt("What is the third player's name?");
+        player4.name = prompt("What is the fourth player's name?");
+    }
+    youBuyWorkers(player1);
+    youBuyWorkers(player2);
+    youBuyWorkers(player3);
+    youBuyWorkers(player4);
+    getMoneyM(player1);
+    getMoneyM(player2);
+    getMoneyM(player3);
+    getMoneyM(player4);
+    taxpayer();
+    cWinner(beginRound4);
 }
