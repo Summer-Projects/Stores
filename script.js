@@ -111,6 +111,7 @@ var taxPayer = function() {
             next.money *= 0.9;
             x = x - 1;
         }
+        round = 0;
     } else {
         var left = 6 - round;
         confirm("There are " + left + " days till taxday");
