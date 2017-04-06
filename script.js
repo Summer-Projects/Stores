@@ -176,7 +176,7 @@ var beginRound2 = function() {
     getMoneyM(player1);
     getMoneyM(player2);
     getMoneyM(ai1);
-    getMoneyM(ai3);
+    getMoneyM(ai2);
     taxPayer();
     cWinner(beginRound2);
 }
