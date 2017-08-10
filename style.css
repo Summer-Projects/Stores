@@ -5,11 +5,6 @@ td {
     text-align: center;
 }
 
-table {
-    margin: auto;
-    background-color:white;
-}
-
 p {
     text-align: center;
 }
@@ -20,7 +15,7 @@ p {
 }
 
 #button {
-    height: 10%;
+    height: 20%;
     width: 30%;
     border: solid 1.5px;
     border-radius:20%;
@@ -51,10 +46,12 @@ h6, summary {
 .owners {
     text-align:center;
 }
-si {
+
+a {
     color: blue;
 }
-
-.meter {
-    margin:auto;
-}
+.gameB {
+    margin-top: 50px;
+    background-color: #00ff00;
+    border-radius: 10px;
+}   

@@ -1,47 +1,43 @@
 <!DOCTYPE html>
     <html>
         <head>
+            <title>Stores</title>
             <link rel='stylesheet' href='style.css'/>
-            <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+            <script src="https://code.jquery.com/jquery-latest.min.js"></script>
         </head>
         <body>
             <script src='script.js'></script>
             <div class="homePage">
                 <h1 class="title">Stores</h1>
-                <h3 class="owners">Made by the combined effort of <si>GoRedbirds</si> and <si>Steven.copeland</si></h3>
+                <h3 class="owners">Made by the combined effort of <a href='https://goredbirds.github.io/MyWebsite/'>GoRedbirds</a> and <a href='https://stevencopeland.github.io/Website/'>Steven.copeland</a></h3>
                 <div class="ruleButton" id="button">Rules</div>
-                <div class="gameButton" id="button">Play Game</div>          <div class="credits">
-                
-                </div>
+                <div class="gameButton" id="button">Play Game</div>
             </div>
-            <div class="game">
-                <table>
-                    <tr>
-                        <td>A</td>
-                        <td>1</td>
-                        <td>4</td>
-                        <td>F</td>
-                    </tr>
-                    <tr>
-                        <td>B</td>
-                        <td colspan="2"><em>Stores</em></td>
-                        <td>E</td>
-                    </tr>
-                    <tr>
-                        <td>C</td>
-                        <td>3</td>
-                        <td>4</td>
-                        <td>D</td>
-                    <tr>
-                </table>
+            <div class='game'>
+                <div class='gamei' id='button'>One player</div>
+                <div class='gameii' id='button'>Two player</div>
+                <div class='gameiii' id='button'>Three player</div>
+                <div class='gameiv' id='button'>Four player</div>
+            </div>
+            <div class="game1">
                 <p>
-                <!--<button onclick="shares()">Shares</button>
-                <button onclick="money()">Money</button>-->
-                <button onclick="max_money()" class="gameB">>Leader</button>
-                <button onclick="beginRound()" class="gameB">Begin Round</button>
-                <button onclick="money_to_earn()" class="gameB">Money left to earn</button>
-                <div class="back" id="button">Back</div>
-                <div class="hide" id="button">Hide back button</div>
+                <button onclick="beginRound1()" class="gameB">Begin Round</button>
+                </p>
+            </div>
+            <div class='game2'>
+                <p>
+                <button onclick='beginRound2()' class='gameB'>Begin round</button>
+                </p>
+            </div>
+            <div class='game3'>
+                <p>
+                <button onclick='beginRound3()' class='gameB'>Begin Round</button>
+                </p>
+            </div>
+            <div class='game4'>
+                <p>
+                <button onclick='beginRound4()' class='gameB'>Begin Round</button>
+                </p>
             </div>
             <div class="rules">
                 <h2>You and three other nefarious business-men with expensive suits are racing to be the first to own $500,000</h2>
@@ -50,6 +46,7 @@
                     <li>You start out with 15 dollars.</li>
                     <li>Every turn, you choose how many workers to buy. Workers cost 20 dollars each.</li>
                     <li>For every worker you buy, your productivity increases.</li>
+                    <li>Every 6 turns, everybody loses 10% of their money</li>
                     <li>Whoever gets $500,000 first, wins!</li>
                     
                 </ul>
